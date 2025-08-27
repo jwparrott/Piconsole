@@ -6,9 +6,6 @@ You get:
 - **Pico firmware (`pico_main.py`)**: drives a **16×2 HD44780** LCD, reads two **rotary encoders** (with push buttons), stores a full **80×24** screen buffer sent from the Pi, and lets you scroll **up/down** and **left/right** through the buffer. Button clicks send **Enter** and **Backspace** to the Pi’s shell.
 - **Pi bridge (`pi_bridge.py`)**: runs a real shell under a **PTY**, uses **pyte** (VT100 emulator) to keep a full screen buffer in sync, and continuously streams snapshots to the Pico over UART. It also accepts key events back from the Pico.
 
-> **Why not plug a USB keyboard into the Pico?**  
-> The RP2040’s USB controller is **device-only**. It cannot be a USB **host** for keyboards without extra host hardware. So in this design the **Pi 3B** is the USB host (plug your keyboard into the Pi), and the Pico is the display/knob front‑end.
-
 ---
 
 ## Hardware Overview
@@ -115,7 +112,7 @@ Internal pull-ups are enabled in the firmware; wire buttons to **GND**.
 
 ## Limitations & Alternatives
 
-- **USB Host on Pico**: The RP2040’s built-in USB controller does **not** support host mode; to plug a USB keyboard into the Pico you’d need extra host hardware (e.g., MAX3421E). This project instead lets the **Pi** be the USB host.
+
 - **ANSI/VT Compatibility**: `pyte` handles common escape sequences well, but some very exotic apps may render imperfectly.
 
 ---
