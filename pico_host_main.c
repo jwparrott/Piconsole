@@ -23,7 +23,7 @@
 //     AND inject 5V onto the Pico's VBUS pin (pin 40) from a clean, current-limited 5V supply.
 //   - Do NOT power the Pico from the same USB PC port at the same time. See README_HOST.md.
 //
-// Author: ChatGPT
+
 
 #include <stdio.h>
 #include <string.h>
