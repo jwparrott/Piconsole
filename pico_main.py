@@ -23,7 +23,7 @@
 #   Enc A (vertical): A=GP14, B=GP15, BUTTON=GP16 (to GND, pull-up enabled)
 #   Enc B (horizontal): A=GP17, B=GP18, BUTTON=GP19 (to GND, pull-up enabled)
 #
-# Author: ChatGPT
+
 
 from machine import Pin, UART
 import utime
