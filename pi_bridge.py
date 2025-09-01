@@ -19,7 +19,7 @@
 # Run:
 #   python3 pi_bridge.py --port /dev/serial0 --baud 115200 --rows 24 --cols 80
 #
-# Author: ChatGPT
+
 
 import sys, os, time, argparse, select, serial, pty, tty, termios
 import pyte
